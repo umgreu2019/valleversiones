@@ -1,0 +1,124 @@
+<!--
+* Copyright 2016 Carlos Eduardo Alfaro Orellana
+-->
+<!DOCTYPE html>
+<html lang="es">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Login @KJL</title>
+	<link rel="shortcut icon" href="assets/icons/gno.ico" type="image/x-icon"/>
+	<link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700|Roboto+Slab:400,700|Material+Icons"/>
+	<link rel="stylesheet" href="css/normalize.css">
+	<link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/style.css" />
+    <link rel="stylesheet" href="css/sweetalert2.min.css">
+    <script src="js/sweetalert2.all.min.js"></script>
+    <script src="js/sweetalert2.min.js"></script>
+	<link rel="stylesheet" href="css/material.min.css">
+	<link rel="stylesheet" href="css/material-design-iconic-font.min.css">
+	<link rel="stylesheet" href="css/jquery.mCustomScrollbar.css">
+	<link rel="stylesheet" href="css/main.css">
+	<script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+	<script>window.jQuery || document.write('<script src="js/jquery-1.11.2.min.js"><\/script>')</script>
+	<script src="js/material.min.js" ></script>
+	<script src="js/jquery.mCustomScrollbar.concat.min.js" ></script>
+	<script src="js/main.js" ></script>
+</head>
+<body class="cover">
+	<div class="container-login">
+		<p class="text-center" style="font-size: 80px;">
+			<i class="fas fa-circle"></i>
+		</p>
+		<p class="text-center text-condensedLight">Ingrese con su Cuenta</p>
+		<form method="POST" id="frmlog">
+			<div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
+			    <input class="mdl-textfield__input" type="text" name="usuario"id="usuario">
+			    <label class="mdl-textfield__label" for="usuario">Usuario</label>
+			</div>
+			<div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
+			    <input class="mdl-textfield__input" type="password" name="contra" id="contra">
+			    <label class="mdl-textfield__label" for="contra">Contraseña</label>
+			</div>
+			<button id="btnlog" class="mdl-button mdl-js-button mdl-js-ripple-effect" style="color: #3F51B5; float:right;" type="button">
+				<span>Ingresar A  </span><i class="zmdi zmdi-mail-send"></i>
+			</button>
+		</form>
+	</div>
+
+</body>
+<script src="particles.js"></script>
+        <script src="app.js"></script>
+        <script src="assets/js/plugins/demo.js"></script>
+        <script src="assets/js/core/jquery.min.js"></script>
+        <script src="js/llenado.js"></script>
+        <script>
+            $(document).ready(function(){
+              var x=5;
+                $("#btnlog").click(function(){
+                    var verif=validarFormVacio('frmlog');
+                      
+                    if(verif>0){
+                     alert("HOLA");
+                      }
+                      else{
+                           dato = $("#frmlog").serialize();
+                               
+                        $.ajax({
+                         //action del formulario, ej:          
+                          type: "POST",//el método post o get del formulario
+                          data: dato,//obtenemos todos los datos del formulario
+                          url: "php/loguear.php", 
+                          success:function(r){
+                            if(r==1){
+                                 window.location="vistas/index.php";
+                             }
+                             if(r==0){
+                                x--;
+                              swal({
+                                   type: 'error',
+                                  title: 'Oops...',
+                                  width: 500,
+                                  text: 'Error en la autencificacion quedan: '+x
+                                }) 
+                             }
+                             if(r==3){
+                                   swal({
+                                   type: 'error',
+                                  title: 'Oops...',
+                                  width: 500,
+                                  text: 'Error en la autencificacion'
+                                }) 
+                             }
+                              if(r==4){
+                                   swal({
+                                   type: 'error',
+                                  title: 'Oops...',
+                                  width: 500,
+                                  text: 'Error en la autencificacion'
+                                }); 
+                             }
+                              if(r==5){
+                                  swal({
+                                   type: 'error',
+                                  title: 'Oops...',
+                                  width: 500,
+                                  text: 'Error en la autencificacion'
+                                }); 
+                             }
+                            }
+                         });
+                      }
+                    });
+                });
+            document.oncontextmenu=function(){
+     swal({
+            type: 'error',
+            title: 'Oops...',
+            width: 500,
+            text: 'No se puede hacer click derecho'
+         })
+    return false;
+  }
+</script>
+</html>

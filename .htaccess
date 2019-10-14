@@ -1,0 +1,12 @@
+Options All -Indexes
+RewriteEngine On
+RewriteBase /ValleSistema2/
+RewriteRule ^(index)$ index.php [L]
+RewriteRule ^(tablero)$ vistas/index.php [L]
+RewriteRule ^(11cvs)$ vistas/usuario.php [L]
+RewriteRule ^(12cvs)$ vistas/actualizaprofe.php [L]
+RewriteRule ^(23cvs)$ vistas/promover.php [L]
+RewriteRule ^(42cvs)$ vistas/ingcurso.php [L]
+RewriteRule ^(logout)$ php/login/desconectar.php [L]
+RewriteRule ^(loguear)$ php/login/loguear.php [L]
+

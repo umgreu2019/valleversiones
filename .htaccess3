@@ -1,0 +1,16 @@
+Options All -Indexes
+
+# DO NOT REMOVE THIS LINE AND THE LINES BELOW SSL_REDIRECT:sistema.colegiovalledelsur.com
+RewriteEngine on
+
+RewriteCond %{HTTPS} off
+RewriteCond %{HTTP_HOST} ^sistema.colegiovalledelsur.com$
+RewriteRule (.*) https://%{HTTP_HOST}%{REQUEST_URI} [L,R=301]
+RewriteRule ^(tablero)$ vistas/index.php [R=301,L]
+RewriteRule ^(11cvs)$ vistas/usuario.php [L,R=301]
+RewriteRule ^(12cvs)$ vistas/actualizaprofe.php [L,R=301]
+RewriteRule ^(23cvs)$ vistas/promover.php [L,R=301]
+RewriteRule ^(42cvs)$ vistas/ingcurso.php [L,R=301]
+RewriteRule ^(logout)$ php/login/desconectar.php [L,R=301]
+RewriteRule ^(loguear)$ php/login/loguear.php [L,R=301]
+# DO NOT REMOVE THIS LINE AND THE LINES ABOVE SSL_REDIRECT:sistema.colegiovalledelsur.com
