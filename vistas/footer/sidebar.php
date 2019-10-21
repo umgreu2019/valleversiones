@@ -11,7 +11,7 @@ $estado[$i]=$c[1];
 ::-webkit-scrollbar{
     width: 8px;
     background-color: #00a8f3;
-    display: none;
+ 
 }
 ::-webkit-scrollbar-track{
     border-radius: 8px;
@@ -279,7 +279,7 @@ $estado[$i]=$c[1];
 
      <script>
           function reports($valor){
-                $.post("reportes.php",{"envio": $valor
+                $.post("http://localhost/ValleSistema2/vistas/reportes.php",{"envio": $valor
             }, function(data){
               window.location="61cvs"
             });

@@ -138,7 +138,7 @@ while ($mostrar3 = mysqli_fetch_array($resultado)) {
         <form id="frmPermisos">
           <div class="card mx-auto col-xl-12 col-sm-12 col-md-12">
             <div class="card-body">
-              <div id="tabla-permisos" class="col-xl-12 col-md-12 col-sm-12">
+              <div id="tabla-permisos" class="row">
                   
               </div>
             </div>

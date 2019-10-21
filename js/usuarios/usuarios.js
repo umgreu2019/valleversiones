@@ -237,7 +237,7 @@ $(document).ready(function(){
 
     
 
-   $('#tableUsuariosLoad').load("Vistas/Tablas/TabalaEmpleado.php");
+   $('#tableUsuariosLoad').load("vistas/Tablas/TabalaEmpleado.php");
 
       $('#btnUpdate').click(function(){
         datos=$('#frmUpdateUsuarios').serialize();
@@ -249,7 +249,7 @@ $(document).ready(function(){
               // alert(r);
             if(r==1){
                 demo.showPar('top','right','ACTUALIZACION COMPLETA','el proceso termino con exito');
-              $('#tableUsuariosLoad').load("Vistas/Tablas/TabalaEmpleado.php");
+              $('#tableUsuariosLoad').load("vistas/Tablas/TabalaEmpleado.php");
             }else{
                 demo.showDepar('top','right','ERROR AL ACTUALIZAR','Hubo un Error :(');  
             }
@@ -292,7 +292,7 @@ function actualiza(idUser){
             // alert(r);
               if (r!=null) {
                 demo.showPar('top','right','DATO'+" "+r," "+'el proceso termino con exito');
-                $('#tableUsuariosLoad').load("Vistas/Tablas/TabalaEmpleado.php");
+                $('#tableUsuariosLoad').load("vistas/Tablas/TabalaEmpleado.php");
                 
             }else{
                 demo.showDepar('top','right','ERROR AL ELIMINAR','Hubo un Error :('); 
@@ -323,7 +323,7 @@ function actualiza(idUser){
                        
                     })
         
-        $('#tabla-permisos').load("Vistas/Tablas/listadoempleado.php");
+        $('#tabla-permisos').load("vistas/Tablas/listadoempleado.php");
       }else{
         alert("Error al Cambiar");
       }
@@ -337,7 +337,7 @@ function actualiza(idUser){
       data:"iduser="+idusuario,
       url:"http://localhost/ValleSistema2/php/usuario/intcargaper.php",
       success:function(r){
-        $('#tabla-permisos').load("Vistas/Tablas/listadoempleado.php");
+        $('#tabla-permisos').load("vistas/Tablas/listadoempleado.php");
       }
     });
   }
@@ -363,7 +363,7 @@ function actualiza(idUser){
 
             if (r==1) {
                 demo.showPar('top','right','DATO ELIMINADO','el proceso termino con exito');
-                $('#tableUsuariosLoad').load("Vistas/Tablas/TabalaEmpleado.php");
+                $('#tableUsuariosLoad').load("vistas/Tablas/TabalaEmpleado.php");
                 
             }else{
                 demo.showDepar('top','right','ERROR AL ELIMINAR','Hubo un Error :('); 

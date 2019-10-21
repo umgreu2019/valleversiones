@@ -70,7 +70,8 @@
   <script src="<?php echo SERVERURL; ?>js/plugins/inputmask.js"></script>
   <!-- mask -->
   <!-- <script src="</?php echo SERVERURL; ?>/js/plugins/mask/jquery.mask.js"></script> -->
-  
+  <!-- Smartsupp Live Chat script -->
+
   <script>
     $(document).ready(function() {
 

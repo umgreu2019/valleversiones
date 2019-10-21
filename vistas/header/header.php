@@ -12,7 +12,7 @@
   <link rel="stylesheet" type="text/css" href="<?php echo SERVERURL; ?>/css/MaterialTheme/fonts.css" />
  <!--  <link rel="stylesheet" href="<?php echo SERVERURL; ?>/assets/css/font-awesome.min.css"> -->
 
- <link href="<?php echo SERVERURL; ?>js/Plugins/fontawesomev2/css/all.css" rel="stylesheet">
+ <link href="<?php echo SERVERURL; ?>js/plugins/fontawesomev2/css/all.css" rel="stylesheet">
  <!-- Font-awesome -->
  <!-- <link rel="stylesheet" href="</?php echo SERVERURL; ?>/css/Fonts/css/all.css"> -->
  <!-- end font -->
