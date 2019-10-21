@@ -7,6 +7,7 @@ RewriteRule ^(11cvs)$ vistas/usuario.php [L]
 RewriteRule ^(12cvs)$ vistas/actualizaprofe.php [L]
 RewriteRule ^(23cvs)$ vistas/promover.php [L]
 RewriteRule ^(42cvs)$ vistas/ingcurso.php [L]
+RewriteRule ^(51cvs)$ vistas/ingnotas.php [L]
 RewriteRule ^(logout)$ php/login/desconectar.php [L]
 RewriteRule ^(loguear)$ php/login/loguear.php [L]
 
