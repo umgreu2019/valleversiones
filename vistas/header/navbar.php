@@ -31,13 +31,21 @@
               <li class="nav-item dropdown">
                 <a class="nav-link" href="http://example.com" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                   <i class="material-icons">notifications</i>
-                  <span class="notification">5</span>
+                  <span class="notification" id="count">5</span>
                   <p class="d-lg-none d-md-block">
                     Some Actions
                   </p>
                 </a>
-                <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdownMenuLink">
-                  <a class="dropdown-item" href="#">Mike John responded to your email</a>
+                <div class="dropdown-menu dropdown-menu-right" id="dropdownmenu" aria-labelledby="navbarDropdownMenuLink">
+                  <a class="dropdown-item" href="#">
+                    <div class="row">
+                      <div class="col-md-12"><strong>You have 5 new tasks</strong></div>
+                      <div class="col-md-12"><small><em>Experiencia en 2 minutos 1201</em></small></div>
+                      <div class="dropdown-divider"></div>
+                      <div class="col-md-12 text-center mt-2"><small class="font-weight-bold">Hoy 2019 10:14 AM</small></div>
+                    </div>
+                  </a>
+                  <div class="dropdown-divider"></div>
                   <a class="dropdown-item" href="#">You have 5 new tasks</a>
                   <a class="dropdown-item" href="#">You're now friend with Andrew</a>
                   <a class="dropdown-item" href="#">Another Notification</a>

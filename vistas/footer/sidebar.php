@@ -268,6 +268,15 @@ $estado[$i]=$c[1];
                         <p style="font-size: 13px;">6.3 Reporte Usuarios</p></a>
                       </li>
                       <?php endif; ?>
+
+                      <?php if(($acceso[7]==8 && $estado[7]==1)): ?>
+                       <li class="list-group-item">
+                        <a class="nav-link amplia" href="62cvs">
+                          <i class="material-icons">speaker_notes</i>
+                        <p style="font-size: 13px;">6.4 Reporte Cuadros Bi</p></a>
+                      </li>
+                      <?php endif; ?>
+                      
                     </ul>
                   </div>
                   <div class="dropdown-divider"></div>

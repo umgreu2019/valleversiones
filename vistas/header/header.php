@@ -28,7 +28,8 @@
   <link href="<?php echo SERVERURL; ?>css/demo/demo.css" rel="stylesheet" />
   <link href="<?php echo SERVERURL; ?>css/select2/select2.min.css" rel="stylesheet" />
   <link rel="stylesheet" href="<?php echo SERVERURL; ?>/css/datatable/dataTables.bootstrap4.min.css">
-  <link rel="stylesheet" href="<?php echo SERVERURL; ?>/css/inputmask/inputmask.css">-
+  <link rel="stylesheet" href="<?php echo SERVERURL; ?>/css/inputmask/inputmask.css">
+  <link rel="stylesheet" type="text/css" media="print" href="<?php echo SERVERURL; ?>/css/demo/mediaprint.css">
   
 </head>
 

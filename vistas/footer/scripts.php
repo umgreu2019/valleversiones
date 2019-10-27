@@ -9,6 +9,7 @@
   <script src="<?php echo SERVERURL; ?>js/plugins/perfect-scrollbar/perfect-scrollbar.jquery.min.js"></script>
   <!-- Plugin for the momentJs  -->
   <script src="<?php echo SERVERURL; ?>js/plugins/moment/moment.min.js"></script>
+  <script src="<?php echo SERVERURL; ?>js/plugins/moment/moment-with-locales.min.js"></script>
   <!--  Plugin for Sweet Alert -->
   <script src="<?php echo SERVERURL; ?>js/plugins/sweetalert/sweetalert2.all.min.js"></script>
   <!-- wow -->
@@ -72,6 +73,7 @@
   <!-- <script src="</?php echo SERVERURL; ?>/js/plugins/mask/jquery.mask.js"></script> -->
   <!-- Smartsupp Live Chat script -->
 
+
   <script>
     $(document).ready(function() {
 
@@ -99,6 +101,20 @@
             location.reload();
        }
    })
+
+  // Seccion de notificaciones
+
+ 
+ load_unseen_notification();
+ $(document).on('click', '#navbarDropdownMenuLink', function(){
+  $('#count').html('0');
+  load_unseen_notification('yes');
+ });
+ 
+ setInterval(function(){ 
+
+  load_unseen_notification();; 
+ }, 3000);
 
 
       // Javascript method's body can be found in assets/js/demos.js
@@ -182,7 +198,29 @@
          width: '100%'
         });
     });
+
+    function load_unseen_notification(view = '')
+ {
+  $.ajax({
+   url:"https://sistema.colegiovalledelsur.com/php/tablero/notificacion/fetch.php",
+   method:"POST",
+   data:{view:view},
+   dataType:"json",
+   success:function(data)
+   {
+    $('#dropdownmenu').html(data.notification);
+    if(data.unseen_notification > 0)
+    {
+     $('#count').html(data.unseen_notification);
+    }
+    else if(data.unseen_notification == 0){
+      $('#count').html('0');
+    }
+   }
+  });
+ }
   </script>
+
 
   <script>
       new WOW().init();
